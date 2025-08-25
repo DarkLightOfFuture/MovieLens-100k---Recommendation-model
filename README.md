@@ -2,12 +2,12 @@
 *(formatData.py)*
 
 At the beginning, it was needed to convert `.csv` files into dataframes. Before that I checked if there are any not available data what I did with pycharm csv filters.
-The result was only 1 damaged record, then it wasn't necessary to write script deleting such things and I manually remove it.
+The result was only 1 damaged record, then it wasn't necessary to write script deleting such things and I manually removed it.
 During conversion, I implemented into reviews fields `watched` and `weighted rating`. First one determines percent of movie, that reviewer watched, randomly generated with some constraints. The second is result of `watched * rating` which purpose is favourize reviews with higher `watched` factor.
 
 *(model.py)*
 
-This file is to merge dataframes, from the previous file, and fitting with it neural network along with building recommendation model. A first try was with MLP architecture, it wasn't working as expected because it mixes users and movies embeddings what's not good solution for recommendations. A response for it is Two Tower architecture due to its processing initially in seperated dense layers what improves reasoning of semantic relations between elements. Also I deployed into it records simulations (LightFm)
+This file is to merge dataframes, from the previous file, and fitting with it neural network along with building recommendation model. A first try was with MLP architecture, it wasn't working as expected because it mixes users and movies embeddings what's not good solution for recommendations. A response for it is Two Towers architecture due to its processing initially in seperated dense layers what improves reasoning of semantic relations between elements. Also I deployed into it records simulations (LightFm)
 
 *(test_model.py)*
 
