@@ -141,7 +141,7 @@ class RecommendationModel:
                 movie_df_id = movie_id_map[movie_id]
 
                 def create_prediction(model):
-                    return rating_model.predict(
+                    return model.predict(
                         user_df_id, [movie_df_id], user_features=user_features_matrix,
                         item_features=movie_features_matrix
                     )[0]
